@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct ListView: View {
+    @State var descriptionNote: String = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            List {
+                ListRowView(title: "Este es el primer item")
+            }
+            .listStyle(.plain)
+            .navigationTitle("Mis Tareas 📝")
+            .navigationBarItems(leading: EditButton(),
+                                trailing:
+                                    NavigationLink("Add", destination: Text("Destination"))
+            )
+        }
     }
 }
 
