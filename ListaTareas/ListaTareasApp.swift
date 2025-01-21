@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct ListaTareasApp: App {
+    
+    @State var listViewModel = ListViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ListView()
+                .environment(listViewModel)
         }
     }
 }

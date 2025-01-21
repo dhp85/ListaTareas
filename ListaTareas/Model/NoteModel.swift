@@ -7,11 +7,15 @@
 
 import Foundation
 
-struct NoteModel: Codable, Identifiable {
-    let id: String
-    var isComplete: Bool
-    var description: String
-    
-}
+struct NoteModel: Identifiable {
+    let id: UUID
+    let description: String
+    let isComplete: Bool
 
+    init(id: UUID = UUID(), description: String, isComplete: Bool) {
+        self.id = id
+        self.description = description
+        self.isComplete = isComplete
+    }
+}
 

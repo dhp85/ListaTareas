@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ListView: View {
-    @State var descriptionNote: [NoteModel] = []
+    @Environment(ListViewModel.self) var vm
     
     var body: some View {
         NavigationView{
             List {
-                ForEach (descriptionNote) {item in
+                ForEach (vm.note) {item in
                     ListRowView(task: item)
                 }
+                .onDelete(perform: vm.deleteTask)
+                .onMove(perform: vm.moveTask)
                 
             }
             .listStyle(.plain)
@@ -29,7 +31,7 @@ struct ListView: View {
 }
 
 #Preview {
-    let item1 = NoteModel(id: "1", isComplete: true, description: "Llamar al medico")
-    let item2 = NoteModel(id: "2", isComplete: true, description: "Ir a por el coche")
-    ListView(descriptionNote: [item1, item2])
+    
+    ListView()
+        .environment(ListViewModel())
 }

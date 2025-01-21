@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddView: View {
-    
+    @Environment(ListViewModel.self) var vm
     @State var textFieldText: String = ""
     
     var body: some View {
@@ -23,7 +23,7 @@ struct AddView: View {
                         .padding()
                     
                     Button("Agregar Tarea") {
-                        //
+                        saveButtonTap()
                     }
                     .padding()
                     .foregroundStyle(.white)
@@ -37,7 +37,12 @@ struct AddView: View {
             .padding(16)
         }
     }
+    
+    func saveButtonTap() {
+        vm.addtask(task: textFieldText)
+    }
 }
 #Preview {
     AddView()
+        .environment(ListViewModel())
 }

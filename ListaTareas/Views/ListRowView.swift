@@ -23,6 +23,6 @@ struct ListRowView: View {
 }
 
 #Preview {
-    let item = NoteModel(id: "1", isComplete: false, description: "Ir a recoger el coche")
+    let item = NoteModel(description: "Ir a recoger el coche", isComplete: false)
     ListRowView(task: item)
 }
