@@ -13,7 +13,6 @@ final class ListViewModel{
     var note: [NoteModel] = []
     
     func saveNote(description: String) {
-        let newNote = NoteModel(description: description)
-        note.insert(newNote, at: 0)
+       
     }
 }

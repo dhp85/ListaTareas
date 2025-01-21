@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ListView: View {
-    @State var descriptionNote: String = ""
+    @State var descriptionNote: [NoteModel] = []
     
     var body: some View {
         NavigationView{
             List {
-                ListRowView(title: "Este es el primer item")
+                ForEach (descriptionNote) {item in
+                    ListRowView(task: item)
+                }
+                
             }
             .listStyle(.plain)
             .navigationTitle("Mis Tareas 📝")
@@ -26,5 +29,7 @@ struct ListView: View {
 }
 
 #Preview {
-    ListView()
+    let item1 = NoteModel(id: "1", isComplete: true, description: "Llamar al medico")
+    let item2 = NoteModel(id: "2", isComplete: true, description: "Ir a por el coche")
+    ListView(descriptionNote: [item1, item2])
 }
