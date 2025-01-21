@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F75470A52D3FAA0900BEE905 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75470A42D3FAA0900BEE905 /* AddView.swift */; };
 		F7E931CA2D3EA23400B394CB /* ListaTareasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E931C72D3EA23400B394CB /* ListaTareasApp.swift */; };
 		F7E931CB2D3EA23400B394CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7E931C32D3EA23400B394CB /* Preview Assets.xcassets */; };
 		F7E931CC2D3EA23400B394CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7E931C52D3EA23400B394CB /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F75470A42D3FAA0900BEE905 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		F7E931B22D3E92E900B394CB /* ListaTareas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListaTareas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E931C32D3EA23400B394CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F7E931C52D3EA23400B394CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				F7E931D32D3EA63200B394CB /* ListView.swift */,
 				F7E931DA2D3EC38900B394CB /* ListRowView.swift */,
+				F75470A42D3FAA0900BEE905 /* AddView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			files = (
 				F7E931D42D3EA63200B394CB /* ListView.swift in Sources */,
 				F7E931CF2D3EA24D00B394CB /* NoteModel.swift in Sources */,
+				F75470A52D3FAA0900BEE905 /* AddView.swift in Sources */,
 				F7E931DB2D3EC38900B394CB /* ListRowView.swift in Sources */,
 				F7E931D72D3EB99F00B394CB /* ListViewModel.swift in Sources */,
 				F7E931CA2D3EA23400B394CB /* ListaTareasApp.swift in Sources */,
