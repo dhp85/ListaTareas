@@ -10,29 +10,29 @@ import Foundation
 @Observable
 final class ListViewModel{
     
-    var note: [NoteModel] = [NoteModel(description: "Ir a por el coche", isComplete: true),
-                             NoteModel(description: "Pagar comunidad", isComplete: false),
-                             NoteModel(description: "Hacer la compra", isComplete: false)]
+    var notes: [NoteModel] = []
     
-    init() {
-        
-    }
-    
-    func saveNote(description: String) {
-       
+    init(notes: [NoteModel] = []) {
+        self.notes = notes
     }
     
     func deleteTask(indexSet: IndexSet) {
-        note.remove(atOffsets: indexSet)
+        notes.remove(atOffsets: indexSet)
     }
     
     func moveTask(from: IndexSet, to: Int) {
         print("Moviendo desde: \(from) hacia: \(to)")
-        note.move(fromOffsets: from, toOffset: to)
+        notes.move(fromOffsets: from, toOffset: to)
     }
     
     func addtask(task: String) {
         let newTask = NoteModel(description: task, isComplete: false)
-        note.append(newTask)
+        notes.append(newTask)
+    }
+    
+    func toggleCompletion(note: NoteModel) {
+        if let index = notes.firstIndex(where: { $0.id == note.id }) {
+            notes[index] = note.updateCompletion()
+        }
     }
 }

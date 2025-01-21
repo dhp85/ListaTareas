@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddView: View {
+    @Environment(\.presentationMode) var presentationMode
     @Environment(ListViewModel.self) var vm
     @State var textFieldText: String = ""
     
@@ -24,6 +25,7 @@ struct AddView: View {
                     
                     Button("Agregar Tarea") {
                         saveButtonTap()
+                        
                     }
                     .padding()
                     .foregroundStyle(.white)
@@ -40,6 +42,7 @@ struct AddView: View {
     
     func saveButtonTap() {
         vm.addtask(task: textFieldText)
+        presentationMode.wrappedValue.dismiss()
     }
 }
 #Preview {

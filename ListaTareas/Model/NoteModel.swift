@@ -8,14 +8,18 @@
 import Foundation
 
 struct NoteModel: Identifiable {
-    let id: UUID
+    let id: String
     let description: String
     let isComplete: Bool
 
-    init(id: UUID = UUID(), description: String, isComplete: Bool) {
+    init(id: String = UUID().uuidString, description: String, isComplete: Bool) {
         self.id = id
         self.description = description
         self.isComplete = isComplete
+    }
+    
+    func updateCompletion() -> NoteModel {
+        return NoteModel(id: id, description: description, isComplete: !isComplete)
     }
 }
 
