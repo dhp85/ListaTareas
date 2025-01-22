@@ -42,7 +42,7 @@ struct AddView: View {
         }
     }
     
-    func saveButtonTap() {
+    private func saveButtonTap() {
         vm.creationTask(description: textFieldText, context: context)
         presentationMode.wrappedValue.dismiss()
     }
