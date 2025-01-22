@@ -6,20 +6,24 @@
 //
 
 import Foundation
+import SwiftData
 
-struct NoteModel: Identifiable {
-    let id: String
-    let description: String
-    let isComplete: Bool
+@Model
+class NoteModel: Identifiable {
+    var id: String
+    var taskDescription: String
+    var isComplete: Bool
+    var order: Int
 
-    init(id: String = UUID().uuidString, description: String, isComplete: Bool) {
+    init(id: String = UUID().uuidString, taskDescription: String, isComplete: Bool, order: Int = 0) {
         self.id = id
-        self.description = description
+        self.taskDescription = taskDescription
         self.isComplete = isComplete
+        self.order = order
     }
     
     func updateCompletion() -> NoteModel {
-        return NoteModel(id: id, description: description, isComplete: !isComplete)
+        return NoteModel(id: id, taskDescription: taskDescription, isComplete: !isComplete, order: order)
     }
 }
 

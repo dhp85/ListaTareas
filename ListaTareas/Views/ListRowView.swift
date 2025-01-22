@@ -16,13 +16,13 @@ struct ListRowView: View {
         HStack {
             Image(systemName: task.isComplete ? "checkmark.circle" : "circle")
                 .foregroundColor(task.isComplete ? .green : .red)
-            Text(task.description)
+            Text(task.taskDescription)
             Spacer()
         }
     }
 }
 
 #Preview {
-    let item = NoteModel(description: "Ir a recoger el coche", isComplete: false)
+    let item = NoteModel(taskDescription: "Ir a recoger el coche", isComplete: false, order: 0)
     ListRowView(task: item)
 }

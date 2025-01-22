@@ -16,6 +16,8 @@ struct ListaTareasApp: App {
         WindowGroup {
             ListView()
                 .environment(listViewModel)
+                
         }
+        .modelContainer(for: NoteModel.self)
     }
 }

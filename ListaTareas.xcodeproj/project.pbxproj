@@ -67,9 +67,9 @@
 		F7E931C82D3EA23400B394CB /* ListaTareas */ = {
 			isa = PBXGroup;
 			children = (
+				F7E931CD2D3EA23800B394CB /* Model */,
 				F7E931D52D3EA80100B394CB /* ViewModels */,
 				F7E931D02D3EA5B300B394CB /* Views */,
-				F7E931CD2D3EA23800B394CB /* Model */,
 				F7E931C42D3EA23400B394CB /* Preview Content */,
 				F7E931C52D3EA23400B394CB /* Assets.xcassets */,
 				F7E931C72D3EA23400B394CB /* ListaTareasApp.swift */,

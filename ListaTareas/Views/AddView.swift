@@ -4,10 +4,12 @@
 //
 //  Created by Diego Herreros Parron on 21/1/25.
 //
-
+import SwiftData
 import SwiftUI
 
 struct AddView: View {
+    
+    @Environment(\.modelContext) private var context: ModelContext
     @Environment(\.presentationMode) var presentationMode
     @Environment(ListViewModel.self) var vm
     @State var textFieldText: String = ""
@@ -41,7 +43,7 @@ struct AddView: View {
     }
     
     func saveButtonTap() {
-        vm.addtask(task: textFieldText)
+        vm.creationTask(description: textFieldText, context: context)
         presentationMode.wrappedValue.dismiss()
     }
 }
