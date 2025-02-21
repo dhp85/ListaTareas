@@ -48,7 +48,6 @@ Se utiliza para conectar la vista con los datos y la lógica de negocio.
 
 - Xcode 15 o superior.
 - macOS 12.0 o superior.
-- Familiaridad con SwiftUI y MVVM.
 
 ## Instalación
 
@@ -62,4 +61,4 @@ Para clonar el proyecto y ejecutarlo en tu máquina local, sigue estos pasos:
 	3.	Asegúrate de seleccionar el simulador o dispositivo correcto.
 	4.	Compila y ejecuta el proyecto: Cmd + R
 ## Creditos
-Desarrollado por Diego Herreros Parrón practicar la creación de interface con SwiftUI y la persistencia de datos con SwiftData.
+Desarrollado por Diego Herreros Parrón para practicar la creación de interface con SwiftUI y la persistencia de datos con SwiftData.
